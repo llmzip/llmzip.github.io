@@ -1,0 +1,24 @@
+name: Update llmzip.github.io
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-git-submodule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout llmzip.github.io repository
+        uses: actions/checkout@v4
+        with:
+          submodules: "recursive"
+
+      - name: Update llmzip.github.io submodule
+        run: |
+          git submodule update --remote
+          git add .
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5

@@ -1,0 +1,3 @@
+[submodule "llmzip"]
+	path = llmzip
+	url = https://github.com/llmzip/llmzip

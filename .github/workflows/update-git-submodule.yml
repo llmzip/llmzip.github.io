@@ -1,4 +1,4 @@
-name: Update llmzip.github.io
+name: Update Git Submodule
 
 on:
   repository_dispatch:

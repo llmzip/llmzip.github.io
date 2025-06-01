@@ -1,6 +1,8 @@
 name: Update llmzip.github.io
 
 on:
+  repository_dispatch:
+    types: [update-git-submodule]
   workflow_dispatch:
 
 jobs:
